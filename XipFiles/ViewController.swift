@@ -10,9 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
+        if let feature = Bundle.main.loadNibNamed("View", owner: self, options: nil)?.first as? UICustomView {
+            
+            feature.labelName.text = "Mohamed osama is iOS developer"
+            
+            self.view.addSubview(feature)
+            
+           
+        }
+        
+       
+
+     
+        
     }
 
 
